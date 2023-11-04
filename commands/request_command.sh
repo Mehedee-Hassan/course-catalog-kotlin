@@ -8,14 +8,11 @@ Course Controller: |
 
 CREATE COURSE:
 ==============
-curl -i \
--d '{"id":null, "name":"Build Restful APIs using Kotlin and SpringBoot", "category": "Development"}' \
--H "Content-Type: application/json" \
--X POST http://localhost:8080/v1/courses
+curl -i -d "{\"id\":null, \"name\":\"Build Restful APIs using Kotlin and SpringBoot\", \"category\": \"Development\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/v1/courses
 
 
 curl -i \
--d '{"id":null, "name":"Build Reactive Microservices using Spring WebFlux/SpringBoot ", "category": "Development"}' \
+-d "{"id":null, "name":"Build Reactive Microservices using Spring WebFlux/SpringBoot ", "category": "Development"}' \
 -H "Content-Type: application/json" \
 -X POST http://localhost:8080/v1/courses
 
