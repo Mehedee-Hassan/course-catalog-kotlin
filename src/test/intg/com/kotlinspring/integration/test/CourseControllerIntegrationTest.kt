@@ -33,7 +33,10 @@ class CourseControllerIntegrationTest {
             .returnResult()
             .responseBody
 
-        Assertions.assertEquals("",saveCourseDTO)
+        Assertions.assertTrue {
+            saveCourseDTO!!.id != null
+            // expecting not null --> integration test
+        }
 
     }
 }
